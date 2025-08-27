@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca Comunitária</title>
+</head>
+<body>
+    <header>
+        <h1>Biblioteca Comunitária</h1>
+        <p><a href="#">Cátalogo</a></p>
+        <p><a href="#">Recomendações</a></p>
+        <p><a href="#">Sobre</a></p>
+        <p><a href="#">Contato</a></p>
+        <div class="search">
+            <form class="search-bar">
+                <input type="text" placeholder="Buscar por título, autor ou categoria">
+                <button type="submit">Buscar</button>
+            </form>
+        </div>
+        <button id="login">Entrar</button>
+        <button id="add-livro">Adicionar um livro</button>
+    </header>
+    <section class="container-content">
+        <h1>Descubra o Mundo dos Livros em Nossa Biblioteca Comunitária</h1>
+        <p>Conectando leitores, compartilhando conhecimento e <br> fortalecendo nossa comunidade através da paixão pela <br> leitura</p>
+        <div class="search-main">
+            <form class="search-bar-main">
+                <input type="text" placeholder="Buscar por título, autor, categoria ou ISBN">
+                <button type="submit">Buscar</button>
+            </form>
+        </div>
+        <button>Explorar Catálogo</button>
+        <button>Ver Recomendações</button>
+    </section>
+    <section class="catalogo">
+        <h1>Nosso Catálogo</h1>
+        <p>Explore nossa coleção diversificada de livros, desde clássicos da literatura até as mais recentes obras de ficção e não ficção.</p>
+        <div class="filtro">
+            <form class="filtro-livro">
+                <label for="categoria">Filtros:</label>
+                <select id="categoria" name="categoria">
+                    <option value="">Todas as categorias</option>
+                    <option value="brasileira">Leitura brasileira</option>
+                    <option value="cientifica">Ficção Científica</option>
+                    <option value="infantil">Literatura Infantil</option>
+                    <option value="fantasia">Fantasia</option>
+                    <option value="historia">História</option>
+                    <option value="magico">Realismo Mágico</option>
+                    <option value="politica">Fábula Política</option>
+                </select>
+                <select id="titulo" name="titulo">
+                    <option value="">Título</option>
+                    <option value="autor">Autor</option>
+                    <option value="ano">Ano</option>
+                    <option value="avaliacao">Avaliação</option>
+                </select>
+            </form>
+        </div>
+
+     <div class="book-container">
+           <!--Livro 1-->
+        <div class="block-1">
+            <div class="block-1-top">
+                <div class="block-1-tags">
+                    <p id="categoria-block">Ficção Científica</p>
+                    <p id="emprestado">Emprestado</p>
+                </div>
+                <div class="block-1-image">
+                    <p>1984</p>
+                </div>
+                <div class="block-1-down">
+                    <p id="title">1984</p>
+                    <p id="author">George Orwell</p>
+                    <p id="date">1949</p>
+                    <p id="description">Um romance distópico que retrata <br>
+                        uma sociedade totalitária onde <br>
+                        o governo controla todos os <br>
+                         aspectos da vida</p>
+                    <p id="rating">(4/5)</p>
+                    <button id="details">Ver detalhes</button>
+                </div>
+            </div>
+        </div>
+        <!--Livro 2-->
+        <div class="block-2">
+            <div class="block-2-top">
+                <div class="block-2-tags">
+                    <p id="categoria-block">Fábula Política</p>
+                    <p id="disponivel">Disponível</p>
+                </div>
+                <div class="block-2-image">
+                    <p>A revolução dos Bichos</p>
+                </div>
+                <div class="block-2-down">
+                    <p id="title">A revolução dos Bichos</p>
+                    <p id="author">George Orwell</p>
+                    <p id="date">1945</p>
+                    <p id="description">Uma alegoria sobre a corrupção do poder <br>
+                        e as revoluções que prometem liberdade <br>
+                        mas acabam em tirania.</p>
+                    <p id="rating">(4/5)</p>
+                    <button id="details">Ver detalhes</button>
+                </div>
+            </div>
+        </div>
+     </div>
+    </section>
+</body>
+</html>
