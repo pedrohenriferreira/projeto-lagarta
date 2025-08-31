@@ -1,7 +1,7 @@
 # 📚 Biblioteca Comunitária  
 
 ## 📌 Descrição do Projeto  
-O projeto **Biblioteca Comunitária** tem como objetivo criar uma plataforma web simples e acessível para a comunidade local.  
+O projeto acadêmico desenvolvido para a Universidade Presbiteriana Mackenzie **Biblioteca Comunitária** tem como objetivo criar uma plataforma web simples e acessível para a comunidade local.  
 A ideia é facilitar o acesso ao acervo de livros, divulgar eventos culturais e aproximar a comunidade da biblioteca.  
 
 ---
