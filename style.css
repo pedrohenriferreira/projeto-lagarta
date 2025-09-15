@@ -1,0 +1,735 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Epunda+Slab:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+    --background: #faf8f4;
+    --foreground: #302318;
+    --primary: #5d3317;
+    --primary-foreground: #faf8f4;
+    --secondary: #d4ddd4;
+    --accent: #f5d742;
+    --muted: #e8e4dd;
+    --card: #f5f1e8;
+    --border: #ddd5c7;
+    --warm-brown: #5d3317;
+    --sage-green: #d4ddd4;
+    --golden-accent: #f5d742;
+    --cream-bg: #faf8f4;
+    --parchment: #f5f1e8;
+    --gradient-warm: linear-gradient(135deg, #f5f1e8, #f6eb94);
+    --gradient-hero: linear-gradient(135deg, #5d3317, #6b3d20);
+    --gradient-card: linear-gradient(145deg, #f5f1e8, #ede7dc);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+/* --- HEADER --- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f9f8f4;
+}
+
+.titulo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #6b4a32;
+}
+
+.titulo h1 {
+    font-weight: 500;
+    font-family: "Epunda Slab", serif;
+}
+
+.titulo span {
+    font-size: 40px;
+}
+
+.link-content {
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+}
+
+header a {
+    color: rgba(0, 0, 0, 0.76);
+    text-decoration: none;
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+.search-bar {
+    padding: 6px;
+    border: 1px solid #724e34;
+    border-radius: 5px;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.search-bar input {
+    width: 230px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.search-bar button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.search-bar button span {
+    font-size: 20px;
+    color: #807f7c;
+    vertical-align: middle;
+}
+
+.botoes {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    text-decoration: none;
+}
+
+.botoes a:hover {
+    text-decoration: none;
+}
+
+#login {
+    border-radius: 5px;
+    padding: 6px;
+    border: 1px solid #724e34;
+    color: #63442f;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    background-color: #f9f8f4;
+}
+
+#login span {
+    font-size: 20px;
+    color: #724e34;
+}
+
+#login:hover {
+    background-color: var(--border);
+    transition: background-color 0.2s linear, color 0.2s linear;
+    cursor: pointer;
+}
+
+#add-livro {
+    background-color: #724e34;
+    border-radius: 5px;
+    color: white;
+    padding: 8.5px;
+    border: none;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+#add-livro span {
+    font-size: 15px;
+    color: white;
+}
+
+#add-livro:hover {
+    background-color: #553a26;
+    transition: background-color 0.2s linear, color 0.2s linear;
+    cursor: pointer;
+}
+
+/* --- HERO SECTION --- */
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    background-color: #63442f;
+}
+
+.hero-content {
+    padding: 40px;
+}
+
+.hero-content h1 {
+    width: 100%;
+    font-size: 50px;
+}
+
+.hero-content h1 span {
+    color: #f0d589;
+}
+
+.hero-content p {
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 350;
+}
+
+.search-bar-main {
+    width: 500px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.search-bar-main input {
+    flex-grow: 1;
+    padding: 8px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+}
+
+.search-bar-main button {
+    padding: 6px;
+    background-color: #63442f;
+    color: white;
+    display: flex;
+    align-items: center;
+    border: none;
+    gap: 10px;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+.search-bar-main button span {
+    font-size: 15px;
+}
+
+.container-buttons {
+    padding: 20px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.container-buttons a {
+    text-decoration: none;
+}
+
+#explorar,
+#recomendacoes {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    width: 200px;
+    border-radius: 10px;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    color: #442f21;
+}
+
+#explorar span,
+#recomendacoes span {
+    font-size: 20px;
+}
+
+#explorar {
+    background-color: #cfddd7;
+}
+
+#explorar:hover {
+    background-color: #a2ada8;
+    transition: background-color 0.2s linear, color 0.2s linear;
+    cursor: pointer;
+}
+
+#recomendacoes {
+    background-color: #f5f1e8; /* Adicionado um fundo para melhor visualização */
+}
+
+#recomendacoes:hover {
+    background-color: #cecac1;
+    transition: background-color 0.2s linear, color 0.2s linear;
+    cursor: pointer;
+}
+
+
+/* --- CATÁLOGO SECTION --- */
+.catalogo {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.catalogo h1 {
+    font-weight: 400;
+    font-family: "Epunda Slab", serif;
+}
+
+.catalogo>p {
+    margin-top: 10px;
+    color: #442f21c1;
+    font-weight: 350;
+}
+
+.filtro {
+    margin: 30px;
+    padding: 20px;
+    display: flex;
+    background-color: #f5f4ef;
+    border: 2px solid #ecebe6;
+    width: 1200px;
+    border-radius: 10px;
+}
+
+.filtro-livro {
+    display: flex;
+    gap: 20px;
+    font-size: 13px;
+    color: #442f21;
+    align-items: center;
+}
+
+.filtro-livro span {
+    font-size: 20px;
+    color: #442f2198;
+}
+
+.filtro-livro label {
+    display: flex;
+    align-items: center;
+}
+
+/* ESTILO CORRIGIDO PARA OS FILTROS */
+#categoria-filtro,
+#ordenar-por {
+    padding: 10px;
+    width: 200px;
+    border-radius: 10px;
+    border: 2px solid #ecebe6;
+    color: #442f21;
+    background-color: white; /* Garante fundo branco */
+}
+
+/* Book Cards */
+.book-container {
+    display: flex;
+    justify-content: center; /* Centraliza os cards caso haja espaço sobrando */
+    gap: 15px;
+    flex-wrap: wrap; /* Permite que os cards quebrem a linha em telas menores */
+}
+
+.book-card {
+    margin-top: 20px;
+    background: var(--gradient-warm);
+    border: 2px solid #ecebe6;
+    border-radius: 10px;
+    width: 300px;
+    height: 500px;
+    display: flex;
+    flex-direction: column; /* Garante a organização vertical interna */
+    overflow: hidden; /* Evita que conteúdo interno vaze */
+}
+
+.book-card-top {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+    font-size: 13px;
+}
+
+.book-category {
+    padding: 4px 8px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #535a56;
+    border-radius: 10px;
+    background-color: #cdd3d1;
+    font-weight: 500;
+}
+
+.book-category span {
+    font-size: 15px;
+}
+
+.book-status {
+    padding: 4px 8px;
+    color: white;
+    border-radius: 10px;
+    font-weight: 500;
+}
+
+.book-status.unavailable {
+    background-color: #eb4443;
+}
+
+.book-status.available {
+    background-color: #442f21;
+}
+
+.book-card-image {
+    height: 200px;
+    flex-shrink: 0; /* Impede que a imagem encolha */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.book-card-image span {
+    font-size: 40px;
+    color: #442f21;
+}
+
+.book-card-down {
+    background-color: #f2efea;
+    padding: 20px;
+    flex-grow: 1; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.book-card-text {
+    text-align: left;
+}
+
+.book-title {
+    font-family: "Epunda Slab", serif;
+    font-weight: 600;
+    color: black;
+    font-size: 1.1em;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.book-author,
+.book-date {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+    text-align: left;
+    color: #63442f;
+    font-weight: 400;
+}
+
+.book-author span,
+.book-date span {
+    font-size: 20px;
+}
+
+.book-description {
+    font-size: 14px;
+    font-weight: 360;
+    margin-top: 8px;
+    text-align: left;
+    color: #552e0d;
+}
+
+.book-rating {
+    color: #63442fd0;
+    font-size: 14px;
+    padding: 0 5px;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    margin-top: 10px; /* Adiciona um espaço acima da avaliação */
+}
+
+.book-rating .fa-solid.fa-star {
+    color: #e8de4f;
+}
+
+.book-rating .fa-regular.fa-star {
+    color: #63442fd0;
+} 
+
+.btn-details {
+    display: flex;
+    margin: 10px auto 0 auto; /* Ajuste na margem */
+    gap: 10px;
+    padding: 8px;
+    width: 100%; /* Ocupa toda a largura do container pai */
+    border-radius: 10px;
+    border: 2px solid #ecebe6;
+    align-items: center;
+    justify-content: center;
+    color: #442f21;
+    background-color: white;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.btn-details span {
+    font-size: 17px;
+}
+
+.btn-details:hover {
+    background-color: #442f21;
+    color: white;
+    transition: background-color 0.2s linear, color 0.2s linear;
+}
+
+/* --- RECOMENDAÇÕES SECTION --- */
+.recomendacoes {
+    background-color: #f1f1ef;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+}
+
+.recomendacoes h1 {
+    font-family: "Epunda Slab", serif;
+    padding: 10px;
+    color: #442f21;
+}
+
+.recomendacoes > p {
+    text-align: center;
+    color: #63442fc9;
+}
+
+.recomendacoes-content {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.recommendation-group {
+    background-color: var(--card);
+    border: 1px solid var(--border);
+    width: 400px;
+    border-radius: 10px;
+}
+
+.recommendation-group h2 {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    gap: 10px;
+    color: #442f21;
+    font-weight: 500;
+}
+
+.recommendation-group h2 span {
+    font-size: 22px;
+}
+
+.recommendation-card {
+    background-color: var(--cream-bg);
+    margin: 15px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.recommendation-card-content {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+}
+
+.recommendation-card-header {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.recommendation-card-footer {
+    padding: 10px 0 0 0;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+}
+
+.rec-card-rating {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+.rec-card-rating .fa-solid.fa-star { /* Regra mais específica */
+    color: #e8de4f;
+}
+
+.rec-card-number {
+    background-color: #442f21;
+    color: white;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.rec-card-title {
+    color: black;
+    font-size: 14px; /* Aumentado para melhor leitura */
+    font-weight: 500;
+}
+
+.rec-card-author {
+    padding: 0 40px;
+    font-size: 13px;
+    color: #63442f;
+}
+
+.rec-card-reads {
+    color: #63442f;
+}
+
+
+
+
+
+/* --- MEDIA QUERIES PARA RESPONSIVIDADE --- */
+
+/* Para Tablets e telas menores (até 1024px) */
+@media (max-width: 1024px) {
+    header {
+        flex-wrap: wrap; 
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .link-content {
+        order: 3; 
+        width: 100%;
+        justify-content: center;
+    }
+
+    .search {
+        order: 1;
+    }
+
+    .botoes {
+        order: 2;
+    }
+
+    /* Ajustes na Barra de Filtro */
+    .filtro {
+        width: 90%; 
+        justify-content: center;
+    }
+    
+    .filtro-livro {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /* Ajustes na Seção de Recomendações */
+    .recomendacoes-content {
+        flex-direction: column; 
+        align-items: center;
+        gap: 30px;
+    }
+
+    .recommendation-group {
+        width: 90%;
+        max-width: 500px; 
+    }
+}
+
+
+/* Para Celulares (até 768px) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    .link-content {
+        flex-direction: column; 
+        align-items: center;
+        gap: 10px;
+        order: 0; 
+    }
+    .search {
+        order: 0;
+    }
+    .botoes {
+        order: 0;
+        flex-direction: column;
+        width: 100%;
+        align-items: stretch;
+    }
+    .botoes a {
+        width: 100%;
+    }
+    .botoes button {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Seção Principal (Hero) */
+    .hero-content h1 {
+        font-size: 2.2rem; 
+    }
+
+    .search-bar-main {
+        width: 90%; 
+    }
+
+    .container-buttons {
+        flex-direction: column; 
+    }
+
+    #explorar, #recomendacoes {
+        width: 250px; 
+    }
+
+    /* Filtros */
+    .filtro {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        border-left: none;
+        border-right: none;
+        border-radius: 0;
+    }
+
+    .filtro-livro {
+        flex-direction: column; 
+        align-items: stretch; 
+        width: 90%;
+    }
+
+    #categoria-filtro, #ordenar-por {
+        width: 100%; 
+    }
+
+    /* Cards de Livros */
+    .book-card {
+        width: 90%; 
+        max-width: 350px; 
+        height: auto; 
+    }
+
+    .book-card-down {
+        padding: 15px; 
+    }
+
+    /* Seção de Recomendações */
+    .recommendation-group {
+        width: 100%;
+    }
+}

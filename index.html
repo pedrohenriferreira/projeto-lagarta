@@ -4,42 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biblioteca Comunitária</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Biblioteca Comunitária</h1>
-        <p><a href="#">Cátalogo</a></p>
-        <p><a href="#">Recomendações</a></p>
-        <p><a href="#">Sobre</a></p>
-        <p><a href="#">Contato</a></p>
+        <div class="titulo">
+            <span class="material-symbols-outlined">book_ribbon</span>
+            <h1>Biblioteca Comunitária</h1>
+        </div>
+        <div class="link-content">
+            <p><a href="#">Catálogo</a></p>
+            <p><a href="#">Recomendações</a></p>
+            <p><a href="#">Sobre</a></p>
+            <p><a href="#">Contato</a></p>
+        </div>
         <div class="search">
             <form class="search-bar">
-                <input type="text" placeholder="Buscar por título, autor ou categoria">
-                <button type="submit">Buscar</button>
+                <button type="submit"><span class="material-symbols-outlined">search</span></button>
+                <input id="buscar" type="text" placeholder="Buscar por título, autor ou categoria...">
             </form>
         </div>
-        <button id="login">Entrar</button>
-        <button id="add-livro">Adicionar um livro</button>
+        <div class="botoes">
+            <a href="#"><button id="login"><span class="material-symbols-outlined">person</span>Entrar</button></a>
+            <a href="#"><button id="add-livro"><span class="material-symbols-outlined">add</span>Adicionar um livro</button></a>
+        </div>
     </header>
-    <section class="container-content">
-        <h1>Descubra o Mundo dos Livros em Nossa Biblioteca Comunitária</h1>
-        <p>Conectando leitores, compartilhando conhecimento e <br> fortalecendo nossa comunidade através da paixão pela <br> leitura</p>
+
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>Descubra o Mundo dos <span>Livros</span> <br> em Nossa <span>Biblioteca <br> Comunitária</span></h1>
+            <p>Conectando leitores, compartilhando conhecimento e <br> fortalecendo nossa comunidade através da paixão pela <br> leitura.</p>
+        </div>
         <div class="search-main">
             <form class="search-bar-main">
-                <input type="text" placeholder="Buscar por título, autor, categoria ou ISBN">
-                <button type="submit">Buscar</button>
+                <input type="text" placeholder="Buscar por título, autor, categoria ou ISBN...">
+                <button type="submit"><span class="material-symbols-outlined">search</span>Buscar</button>
             </form>
         </div>
-        <button>Explorar Catálogo</button>
-        <button>Ver Recomendações</button>
+        <div class="container-buttons">
+            <a href="#"><button id="explorar"><span class="material-symbols-outlined">book_ribbon</span>Explorar Catálogo</button></a>
+            <a href="#"><button id="recomendacoes"><span class="material-symbols-outlined">favorite</span>Ver Recomendações</button></a>
+        </div>
     </section>
+
     <section class="catalogo">
         <h1>Nosso Catálogo</h1>
-        <p>Explore nossa coleção diversificada de livros, desde clássicos da literatura até as mais recentes obras de ficção e não ficção.</p>
+        <p>Explore nossa coleção diversificada de livros, desde clássicos da literatura até <br>as mais recentes obras de ficção e não ficção.</p>
         <div class="filtro">
             <form class="filtro-livro">
-                <label for="categoria">Filtros:</label>
-                <select id="categoria" name="categoria">
+                <label for="categoria-filtro"><span class="material-symbols-outlined">filter_alt</span>Filtros:</label>
+                <select id="categoria-filtro" name="categoria">
                     <option value="">Todas as categorias</option>
                     <option value="brasileira">Leitura brasileira</option>
                     <option value="cientifica">Ficção Científica</option>
@@ -49,8 +66,8 @@
                     <option value="magico">Realismo Mágico</option>
                     <option value="politica">Fábula Política</option>
                 </select>
-                <select id="titulo" name="titulo">
-                    <option value="">Título</option>
+                <select id="ordenar-por" name="ordenar">
+                    <option value="">Ordenar por Título</option>
                     <option value="autor">Autor</option>
                     <option value="ano">Ano</option>
                     <option value="avaliacao">Avaliação</option>
@@ -58,132 +75,205 @@
             </form>
         </div>
 
-     <div class="book-container">
-           <!--Livro 1-->
-        <div class="block-1">
-            <div class="block-1-top">
-                <div class="block-1-tags">
-                    <p id="categoria-block">Ficção Científica</p>
-                    <p id="emprestado">Emprestado</p>
+        <div class="book-container">
+            <div class="book-card">
+                <div class="book-card-top">
+                    <p class="book-category"><span class="material-symbols-outlined">sell</span>Ficção Científica</p>
+                    <p class="book-status unavailable">Emprestado</p>
                 </div>
-                <div class="block-1-image">
-                    <p>1984</p>
+                <div class="book-card-image"><span class="material-symbols-outlined">book</span></div>
+                <div class="book-card-down">
+                    <div class="book-card-text">
+                        <p class="book-title">1984</p>
+                        <p class="book-author"><span class="material-symbols-outlined">person</span>George Orwell</p>
+                        <p class="book-date"><span class="material-symbols-outlined">calendar_today</span>1949</p>
+                        <p class="book-description">Um romance distópico que retrata uma sociedade totalitária onde o governo controla todos os aspectos da vida.</p>
+                    </div>
+                    <p class="book-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>(4/5)</p>
+                    <button class="btn-details"><span class="material-symbols-outlined">visibility</span>Ver detalhes</button>
                 </div>
-                <div class="block-1-down">
-                    <p id="title">1984</p>
-                    <p id="author">George Orwell</p>
-                    <p id="date">1949</p>
-                    <p id="description">Um romance distópico que retrata <br>
-                        uma sociedade totalitária onde <br>
-                        o governo controla todos os <br>
-                         aspectos da vida</p>
-                    <p id="rating">(4/5)</p>
-                    <button id="details">Ver detalhes</button>
+            </div>
+            <div class="book-card">
+                <div class="book-card-top">
+                    <p class="book-category"><span class="material-symbols-outlined">sell</span>Fábula Política</p>
+                    <p class="book-status available">Disponível</p>
+                </div>
+                <div class="book-card-image"><span class="material-symbols-outlined">book</span></div>
+                <div class="book-card-down">
+                    <div class="book-card-text">
+                        <p class="book-title">A Revolução dos Bichos</p>
+                        <p class="book-author"><span class="material-symbols-outlined">person</span>George Orwell</p>
+                        <p class="book-date"><span class="material-symbols-outlined">calendar_today</span>1945</p>
+                        <p class="book-description">Uma alegoria sobre a corrupção do poder e as revoluções que prometem liberdade mas acabam em tirania.</p>
+                    </div>
+                    <p class="book-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>(4/5)</p>
+                    <button class="btn-details"><span class="material-symbols-outlined">visibility</span>Ver detalhes</button>
+                </div>
+            </div>
+            <div class="book-card">
+                <div class="book-card-top">
+                    <p class="book-category"><span class="material-symbols-outlined">sell</span>Realismo Mágico</p>
+                    <p class="book-status available">Disponível</p>
+                </div>
+                <div class="book-card-image"><span class="material-symbols-outlined">book</span></div>
+                <div class="book-card-down">
+                    <div class="book-card-text">
+                        <p class="book-title">Cem Anos de Solidão</p>
+                        <p class="book-author"><span class="material-symbols-outlined">person</span>Gabriel García Márquez</p>
+                        <p class="book-date"><span class="material-symbols-outlined">calendar_today</span>1967</p>
+                        <p class="book-description">A saga épica da família Buendía na cidade fictícia de Macondo, misturando realidade e fantasia.</p>
+                    </div>
+                    <p class="book-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>(5/5)</p>
+                    <button class="btn-details"><span class="material-symbols-outlined">visibility</span>Ver detalhes</button>
+                </div>
+            </div>
+            <div class="book-card">
+                <div class="book-card-top">
+                    <p class="book-category"><span class="material-symbols-outlined">sell</span>Literatura Brasileira</p>
+                    <p class="book-status available">Disponível</p>
+                </div>
+                <div class="book-card-image"><span class="material-symbols-outlined">book</span></div>
+                <div class="book-card-down">
+                    <div class="book-card-text">
+                        <p class="book-title">Dom Casmurro</p>
+                        <p class="book-author"><span class="material-symbols-outlined">person</span>Machado de Assis</p>
+                        <p class="book-date"><span class="material-symbols-outlined">calendar_today</span>1899</p>
+                        <p class="book-description">A narrativa de Bento Santiago sobre seu amor por Capitu e as dúvidas sobre a fidelidade que o atormentam.</p>
+                    </div>
+                    <p class="book-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>(4/5)</p>
+                    <button class="btn-details"><span class="material-symbols-outlined">visibility</span>Ver detalhes</button>
                 </div>
             </div>
         </div>
-        <!--Livro 2-->
-        <div class="block-2">
-            <div class="block-2-top">
-                <div class="block-2-tags">
-                    <p id="categoria-block">Fábula Política</p>
-                    <p id="disponivel">Disponível</p>
-                </div>
-                <div class="block-2-image">
-                    <p>A revolução dos Bichos</p>
-                </div>
-                <div class="block-2-down">
-                    <p id="title">A revolução dos Bichos</p>
-                    <p id="author">George Orwell</p>
-                    <p id="date">1945</p>
-                    <p id="description">Uma alegoria sobre a corrupção do poder <br>
-                        e as revoluções que prometem liberdade <br>
-                        mas acabam em tirania.</p>
-                    <p id="rating">(4/5)</p>
-                    <button id="details">Ver detalhes</button>
-                </div>
-            </div>
-        </div>
-        <!--Livro 3-->
-        <div class="block-3">
-            <div class="block-3-top">
-                <div class="block-3-tags">
-                    <p id="categoria-block">Realismo Mágico</p>
-                    <p id="disponivel">Disponível</p>
-                </div>
-                <div class="block-3-image">
-                    <p>Cem Anos de Solidão</p>
-                </div>
-                <div class="block-2-down">
-                    <p id="title">Cem Anos de Solidão</p>
-                    <p id="author">Gabriel García Márquez</p>
-                    <p id="date">1967</p>
-                    <p id="description">A saga épica da família Buendía<br>
-                        na cidade fictícia de Macondo, misturando realidade <br>
-                        e fantasia.</p>
-                    <p id="rating">(5/5)</p>
-                    <button id="details">Ver detalhes</button>
-                </div>
-            </div>
-        </div>
-        <!--Livro 4-->
-        <div class="block-4">
-            <div class="block-4-top">
-                <div class="block-4-tags">
-                    <p id="categoria-block">Literatura Brasileira </p>
-                    <p id="disponivel">Disponível</p>
-                </div>
-                <div class="block-4-image">
-                    <p>Dom Casmurro</p>
-                </div>
-                <div class="block-4-down">
-                    <p id="title">Dom Casmurro</p>
-                    <p id="author">Machado de Assis</p>
-                    <p id="date">1899</p>
-                    <p id="description">A narrativa de Bento Santiago sobre seu amor por Capitu e <br>
-                        as dúvidas sobre a fidelidade <br>
-                         que o atormentam.</p>
-                    <p id="rating">(4/5)</p>
-                    <button id="details">Ver detalhes</button>
-                </div>
-            </div>
-        </div>
-     </div>
     </section>
+
     <section class="recomendacoes">
         <h1>Recomendações</h1>
-        <p>Descubra seus próximos livros favoritos com base nas preferências da nossa comunidade</p>
-        <div class="populares-block">
-            <div class="populares-content-block">
-                <h2>Mais Populares</h2>
-                <!--Card 1-->
-                <div class="popular-card-1">
-                    <p id="number-card-popular">1</p>
-                    <p id="title-card-popular">O Cortiço</p>
-                    <p id="author-card-popular">Aluísio Azevedo</p>
-                    <div class="populares-content-block-under">
-                        <p id="rating-card-popular">4.5</p>
-                        <p id="leitura-card-popular">89 leituras</p>
+        <p>Descubra seus próximos livros favoritos com base nas preferências da nossa <br>comunidade.</p>
+        <div class="recomendacoes-content">
+            <div class="recommendation-group">
+                <h2><span class="material-symbols-outlined">trending_up</span>Mais Populares</h2>
+                <div class="recommendation-card">
+                    <div class="recommendation-card-content">
+                        <div class="recommendation-card-header">
+                            <p class="rec-card-number">1</p>
+                            <p class="rec-card-title">O Cortiço</p>
+                        </div>
+                        <p class="rec-card-author">Aluísio Azevedo</p>
+                    </div>
+                    <div class="recommendation-card-footer">
+                        <p class="rec-card-rating"><i class="fa-solid fa-star"></i>4.5</p>
+                        <p class="rec-card-reads">89 leituras</p>
                     </div>
                 </div>
-                <!--Card 2-->
-                <div class="popular-card-2">
-                    <p id="number-card-popular">2</p>
-                    <p id="title-card-popular">Dom Casmurro</p>
-                    <p id="author-card-popular">Machado de Assís</p>
-                    <div class="populares-content-block-under">
-                        <p id="rating-card-popular">4.3</p>
-                        <p id="leitura-card-popular">76 leituras</p>
+                <div class="recommendation-card">
+                    <div class="recommendation-card-content">
+                        <div class="recommendation-card-header">
+                            <p class="rec-card-number">2</p>
+                            <p class="rec-card-title">Dom Casmurro</p>
+                        </div>
+                        <p class="rec-card-author">Machado de Assís</p>
+                    </div>
+                    <div class="recommendation-card-footer">
+                        <p class="rec-card-rating"><i class="fa-solid fa-star"></i>4.3</p>
+                        <p class="rec-card-reads">76 leituras</p>
                     </div>
                 </div>
-                <!--Card 3-->
-                <div class="popular-card-3">
-                    <p id="number-card-popular">3</p>
-                    <p id="title-card-popular">Sapiens</p>
-                    <p id="author-card-popular">Yuval Noah Harari</p>
-                    <div class="populares-content-block-under">
-                        <p id="rating-card-popular">4.7</p>
-                        <p id="leitura-card-popular">65 leituras</p>
+                <div class="recommendation-card">
+                    <div class="recommendation-card-content">
+                        <div class="recommendation-card-header">
+                            <p class="rec-card-number">3</p>
+                            <p class="rec-card-title">Sapiens</p>
+                        </div>
+                        <p class="rec-card-author">Yuval Noah Harari</p>
+                    </div>
+                    <div class="recommendation-card-footer">
+                        <p class="rec-card-rating"><i class="fa-solid fa-star"></i>4.7</p>
+                        <p class="rec-card-reads">65 leituras</p>
+                    </div>
+                </div>
+            </div>
+            <div class="recommendation-group">
+                <h2><span class="material-symbols-outlined">favorite</span>Favoritos da Comunidade</h2>
+                <div class="recommendation-card">
+                    <div class="recommendation-card-content">
+                        <div class="recommendation-card-header">
+                            <p class="rec-card-number">1</p>
+                            <p class="rec-card-title">O Pequeno Principe</p>
+                        </div>
+                        <p class="rec-card-author">Antonie de Saint-Exupéry</p>
+                    </div>
+                    <div class="recommendation-card-footer">
+                        <p class="rec-card-rating"><i class="fa-solid fa-star"></i>4.9</p>
+                        <p class="rec-card-reads">92 leituras</p>
+                    </div>
+                </div>
+                <div class="recommendation-card">
+                    <div class="recommendation-card-content">
+                        <div class="recommendation-card-header">
+                            <p class="rec-card-number">2</p>
+                            <p class="rec-card-title">Cem Anos de Solidão</p>
+                        </div>
+                        <p class="rec-card-author">Gabriel García Márquez</p>
+                    </div>
+                    <div class="recommendation-card-footer">
+                        <p class="rec-card-rating"><i class="fa-solid fa-star"></i>4.8</p>
+                        <p class="rec-card-reads">54 leituras</p>
+                    </div>
+                </div>
+                <div class="recommendation-card">
+                    <div class="recommendation-card-content">
+                        <div class="recommendation-card-header">
+                            <p class="rec-card-number">3</p>
+                            <p class="rec-card-title">Harry Potter e a Pedra Filosofal</p>
+                        </div>
+                        <p class="rec-card-author">J.K Rowling</p>
+                    </div>
+                    <div class="recommendation-card-footer">
+                        <p class="rec-card-rating"><i class="fa-solid fa-star"></i>4.9</p>
+                        <p class="rec-card-reads">78 leituras</p>
+                    </div>
+                </div>
+            </div>
+            <div class="recommendation-group">
+                <h2><span class="material-symbols-outlined">workspace_premium</span>Melhores Avaliados</h2>
+                <div class="recommendation-card">
+                    <div class="recommendation-card-content">
+                        <div class="recommendation-card-header">
+                            <p class="rec-card-number">1</p>
+                            <p class="rec-card-title">1984</p>
+                        </div>
+                        <p class="rec-card-author">George Orwell</p>
+                    </div>
+                    <div class="recommendation-card-footer">
+                        <p class="rec-card-rating"><i class="fa-solid fa-star"></i>5</p>
+                        <p class="rec-card-reads">43 leituras</p>
+                    </div>
+                </div>
+                <div class="recommendation-card">
+                    <div class="recommendation-card-content">
+                        <div class="recommendation-card-header">
+                            <p class="rec-card-number">2</p>
+                            <p class="rec-card-title">A Revolução dos Bichos</p>
+                        </div>
+                        <p class="rec-card-author">George Orwell</p>
+                    </div>
+                    <div class="recommendation-card-footer">
+                        <p class="rec-card-rating"><i class="fa-solid fa-star"></i>4.8</p>
+                        <p class="rec-card-reads">38 leituras</p>
+                    </div>
+                </div>
+                <div class="recommendation-card">
+                    <div class="recommendation-card-content">
+                        <div class="recommendation-card-header">
+                            <p class="rec-card-number">3</p>
+                            <p class="rec-card-title">O Pequeno Principe</p>
+                        </div>
+                        <p class="rec-card-author">Antoine de Saint-Exupéry</p>
+                    </div>
+                    <div class="recommendation-card-footer">
+                        <p class="rec-card-rating"><i class="fa-solid fa-star"></i>4.9</p>
+                        <p class="rec-card-reads">92 leituras</p>
                     </div>
                 </div>
             </div>
