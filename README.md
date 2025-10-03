@@ -40,7 +40,7 @@ Este projeto possui caráter extensionista pois conecta a universidade à comuni
 
 ## 🛠️ Tutorial Explicativo – Funcionamento do Projeto
 
-## Passo 1 – Estruturação da Página com HTML
+```Passo 1 – Estruturação da Página com HTML
 
 O HTML cria as seções principais da biblioteca:
 
@@ -161,11 +161,25 @@ Isso foi possível graças ao grid + media queries do CSS.
 A seção de recomendações usa o mesmo modelo de cards, mas destacando livros indicados:
 
 <section id="recomendacoes">
-  <h2>📌 Recomendações</h2>
+  <h2> Recomendações</h2>
   <div class="book-grid">
     <!-- cards especiais -->
   </div>
 </section>
 
 
-✔️ Isso cria uma vitrine de livros selecionados pela biblioteca.
+Isso cria uma vitrine de livros selecionados pela biblioteca.
+
+Durante o desenvolvimento do Biblioteca Comunitária, aprendemos:
+
+HTML: estruturar páginas com seções, cards e modais de forma semântica.
+
+CSS: criar identidade visual, aplicar responsividade e melhorar a experiência do usuário.
+
+JavaScript: manipular o DOM para criar filtros, ordenação e modais dinâmicos.
+
+Integração: unir HTML, CSS e JS em um projeto único e funcional.
+
+Impacto social: a tecnologia pode aproximar a universidade da comunidade, tornando a leitura e informação mais acessíveis.
+
+Este projeto demonstra, de forma prática, como conceitos de desenvolvimento web podem ser aplicados em um caso real, trazendo benefícios sociais e reforçando o aprendizado técnico.
