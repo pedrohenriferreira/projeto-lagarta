@@ -39,7 +39,8 @@ Este projeto possui caráter extensionista pois conecta a universidade à comuni
 - Raphael Squinzari – RA: 10737008
 
 ## 🛠️ Tutorial Explicativo – Funcionamento do Projeto
-🔹 Passo 1 – Estruturação da Página com HTML
+
+## Passo 1 – Estruturação da Página com HTML
 
 O HTML cria as seções principais da biblioteca:
 
